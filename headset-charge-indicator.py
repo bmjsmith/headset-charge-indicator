@@ -50,7 +50,7 @@ def change_icon(dummy):
                 # exit 0 means we could not find out, so set some other icon
                 ind.set_attention_icon_full("audio-card", "Audio Card")
         else:
-            ind.set_attention_icon_full("audio-headset", "Headset")
+            ind.set_attention_icon_full("audio-headset-symbolic", "Headset")
         
     except CalledProcessError as e:
         print(e)
@@ -58,7 +58,7 @@ def change_icon(dummy):
             ind.set_attention_icon_full("audio-speakers", "Audio Card")
             prevSwitch = 1
         elif e.returncode == 2:
-            ind.set_attention_icon_full("audio-headset", "Headset")
+            ind.set_attention_icon_full("audio-headset-symbolic", "Headset")
             prevSwitch = 2
         elif e.returncode == 3:
             ind.set_attention_icon_full("audio-headphones", "USB")
